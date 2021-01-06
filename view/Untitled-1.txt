@@ -1,0 +1,31 @@
+ include_once("../controller/EmpresaController.php");
+                    $EmpresaController=new EmpresaController();
+                    $resultado=$EmpresaController->listarLaEmpresaDeEstaSesion($MuestraEmpresaEventoController['id_empresa']);
+                    if(isset($resultado)){
+                        while ($muestra = mysqli_fetch_array($resultado)) {?>
+                            <tbody>
+                                <tr>
+                                            <td class="mdl-data-table__cell--non-numeric">
+                                                <span style="font-size:20px;">
+                                                <?php echo $muestra['nombre_fantasia'];?>
+                                                </span>
+                                            </td>
+                                            <td class="mdl-data-table__cell--non-numeric">
+                                                <?php echo $muestra['numero_socio'];?>
+                                            </td>
+                                            <td>
+                                                
+                                                                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch<?php echo $muestra['id_empresa'];?>">
+                                                                    <?php if($MuestraEmpresaEventoController['peticion']==1){?>
+                                                                        <input type="checkbox" id="switch<?php echo $muestra['id_empresa'];?>" class="mdl-switch__input" onchange="estado(<?php echo  $muestra['id_empresa'].','.$id_evento;?>);" checked>
+                                                                        <?php }else {?>
+                                                                            <input type="checkbox" id="switch<?php echo $muestra['id_empresa'];?>" class="mdl-switch__input" onchange="estado(<?php echo  $muestra['id_empresa'].','.$id_evento;?>);">
+                                                                            <?php } ?>
+                                                                                <span class="mdl-switch__label"></span>
+                                                                </label>
+                                            </td>
+                                        </tr>
+                            </tbody>
+<?php
+                        }
+                    }

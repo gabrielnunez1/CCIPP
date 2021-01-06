@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es-la">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Cámara de Comercio e Industria de Posadas</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../material.css">
+    <link rel="stylesheet" href="../styles-mdl-tudexgames.css">
+    <script src="../material.js"></script>
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+    </style>
+</head>
+
+<body>
+
+</html>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <style>
+        .mdi-tag::before {
+            margin-top: 4px;
+        }
+        
+        .mdl-menu--multi-column {
+            padding: 8px;
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 0;
+            -moz-column-gap: 0;
+            column-gap: 0;
+        }
+        
+        .mdl-layout__header--waterfall {
+            overflow: visible;
+        }
+        
+        .mdl-layout__header--waterfall.is-compact {
+            overflow: hidden;
+        }
+        
+        .mdl-card__title {
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .mdl-card__title-text,
+        .mdl-card__subtitle-text {
+            align-self: flex-start;
+        }
+        
+        .mdl-card__supporting-text {
+            width: inherit;
+            box-sizing: border-box;
+        }
+        
+        .mdl-layout__content {
+            background: #f2f2f2;
+        }
+        
+        .mdl-layout__header .mdl-textfield .mdl-button {
+            bottom: 18px;
+            /* MDL default value: 20px */
+        }
+        
+        #block-mcsrc-search [id^="edit-actions"] {
+            padding: 0;
+            border-top: none;
+        }
+        
+        .mdl-layout__header .mdl-textfield--expandable,
+        .mdl-layout__header button.mdl-button--icon {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    </style>
+
+    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+            <!-- Add spacer, to align navigation to the right in desktop -->
+            <div class="android-header-spacer mdl-layout-spacer"></div>
+            <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            </div>
+            <!-- Navigation -->
+            <div class="android-navigation-container">
+                <nav class="android-navigation mdl-navigation">
+                    <a class="mdl-navigation__link" href="club.php">Club de descuentos</a>
+                    <a class="mdl-navigation__link" href="articulos.php">Ver articulos</a>
+
+                    <a class="mdl-navigation__link" href="registro.php">Registrar comercio</a>
+                    <a class="mdl-navigation__link" href="iniciar.php">Iniciar sesión</a>
+
+                    <a class="mdl-navigation__link">
+                        <button id="category-demo" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">style</i>
+                        </button>
+                        <span class="mdl-tooltip" for="category-demo">Categorias</span>
+                    </a>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-menu--multi-column" for="category-demo">
+
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=1&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Autos y Motos </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=2&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Computacion y Telefonia </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=3&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Electricidad </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=4&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Electrodom�sticos </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=5&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Equipamientos </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=6&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Estilista y Est�ticas </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=7&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Farmacia y perfumer��a </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=8&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Hogar, Muebles </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=9&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Hoteles, Resto, Bares </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=10&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Indumentaria </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=11&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Joyeria y relojeria </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=12&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Librer��a, papeler��a </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=13&operacion=listar">
+                            <li class="mdl-menu__item">
+                                �pticas </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=14&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Pintureria, Ferreteria </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=25&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Productos Regionales </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=26&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Servicios </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=27&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Supermercado </li>
+                        </a>
+                        <a class="mdl-navigation__link" href="articulos.php?rubro=28&operacion=listar">
+                            <li class="mdl-menu__item">
+                                Veterinarias </li>
+                        </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="android-drawer mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="iniciar.php">Perfil</a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=1&operacion=listar">
+                    Autos y Motos                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=2&operacion=listar">
+                    Computacion y Telefonia                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=3&operacion=listar">
+                    Electricidad                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=4&operacion=listar">
+                    Electrodom�sticos                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=5&operacion=listar">
+                    Equipamientos                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=6&operacion=listar">
+                    Estilista y Est�ticas                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=7&operacion=listar">
+                    Farmacia y perfumer��a                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=8&operacion=listar">
+                    Hogar, Muebles                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=9&operacion=listar">
+                    Hoteles, Resto, Bares                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=10&operacion=listar">
+                    Indumentaria                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=11&operacion=listar">
+                    Joyeria y relojeria                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=12&operacion=listar">
+                    Librer��a, papeler��a                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=13&operacion=listar">
+                    �pticas                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=14&operacion=listar">
+                    Pintureria, Ferreteria                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=25&operacion=listar">
+                    Productos Regionales                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=26&operacion=listar">
+                    Servicios                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=27&operacion=listar">
+                    Supermercado                </a>
+            <a class="mdl-navigation__link" href="articulos.php?rubro=28&operacion=listar">
+                    Veterinarias                </a>
+            <div class="android-drawer-separator"></div>
+            <div class="android-drawer-separator"></div>
+        </nav>
+    </div>
+    <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+
+        <!--EVENTO-->
+        <div class="android-more-section">
+            <div class="android-card-container mdl-grid">
+
+                <!-- Wide card with share menu button -->
+                <style>
+                    .demo-card-wide.mdl-card {}
+                    
+                    .demo-card-wide > .mdl-card__title {
+                        color: #fff;
+                        height: 176px;
+                        background: url("../img/evento32741.png") bottom right 15% no-repeat #46B6AC;
+                    }
+                    
+                    .demo-card-wide > .mdl-card__menu {
+                        color: #fff;
+                    }
+                </style>
+
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Reventon 2019</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Es una fiesta de descuentos y promociones donde los comerciantes por una vez y de manera excepcional hacen un descuento único y extraordinario durante esos días! </div>
+                </div>
+                <style>
+                    .mdl-precio {
+                        color: #999;
+                        display: block;
+                        overflow: hidden;
+                        line-height: 1;
+                        padding-left: 20px;
+                        position: relative;
+                        font-size: 16px;
+                        text-decoration: line-through;
+                    }
+                    
+                    .mdl-porcentaje {
+                        overflow: visible;
+                        display: inline-block;
+                        vertical-align: text-bottom;
+                        line-height: 1em;
+                        font-size: 44px;
+                        font-weight: 300;
+                        font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+                    }
+                    
+                    .mdl-cantidad_descuento {
+                        float: left;
+                        color: #39b54a;
+                    }
+                </style>
+
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/5-imagen-1313718.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Lego Dimensions - LOTR Gimli Fun Pack</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$1.200,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">20% OFF</span>
+                        <span class="mdl-precio">$1.500,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=2">
+                           Sony                            <i class="material-icons">chevron_right</i>Lego Dimensions - LOTR Gimli Fun Pack</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/5-imagen-144170.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Play Station</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$4.500,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$5.000,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=3">
+                           Sony                            <i class="material-icons">chevron_right</i>Play Station</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/5-imagen-1242951.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> PlayStation®4</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$6.300,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$7.000,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=4">
+                           Sony                            <i class="material-icons">chevron_right</i>PlayStation®4</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/6-imagen-1285851.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Google Pixel 2 Xl</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$3.600,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$4.000,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=5">
+                           Google                            <i class="material-icons">chevron_right</i>Google Pixel 2 Xl</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/6-imagen-1174175.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Google Chromecast 2 Gen </h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$1.440,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$1.600,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=6">
+                           Google                            <i class="material-icons">chevron_right</i>Google Chromecast 2 Gen </a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/6-imagen-1105125.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Tarjeta Google Play U$100 Usa </h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$4.050,00                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$4.500,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=7">
+                           Google                            <i class="material-icons">chevron_right</i>Tarjeta Google Play U$100 Usa </a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-card__media">
+                        <img src="../img/7-imagen-1218078.png">
+
+                    </div>
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text"> Motorola Moto G6 Plus Deep Indigo</h4>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <div>
+                            <span class="mdl-porcentaje">$1.349,10                      </span>
+                        </div>
+                        <span class="mdl-cantidad_descuento">10% OFF</span>
+                        <span class="mdl-precio">$1.499,00</span>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=8">
+                           Fravega                            <i class="material-icons">chevron_right</i>Motorola Moto G6 Plus Deep Indigo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="android-footer mdl-mega-footer">
+            <div class="mdl-mega-footer--top-section">
+                <div class="mdl-mega-footer--right-section">
+                    <a class="mdl-typography--font-light" href="#top">
+               Ir arriba
+               <i class="material-icons">expand_less</i>
+               </a>
+                </div>
+            </div>
+            <div class="">
+
+                <p class="mdl-typography--font-light">© 2018 Tudex Networks. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</div>
+<!--
+   <a href="cargar/index.php" target="_blank" id="view-source" class="mdl-button mdl-js-button  mdl-button--fab mdl-button--colored mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast"><i class="material-icons">add</i></a>-->
+<script src="res/material.js"></script>
+</body>
+
+</html>

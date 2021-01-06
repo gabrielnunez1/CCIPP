@@ -1,0 +1,131 @@
+<?php 
+         include_once("../controller/EventoController.php");
+         $EventoController=new EventoController();
+         $resultado = $EventoController->listar();
+         $contador=0;
+         while ($muestra = mysqli_fetch_array($resultado)) {
+           #si el evento esta avilitado
+           
+           if ($contador==0){
+           
+             if ($muestra['visible']==1 )
+               {
+                 $contador=1;
+                 ?>
+      <!--EVENTO-->
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.mdl-precio{
+  color: #999;
+    display: block;
+    overflow: hidden;
+    line-height: 1;
+    top: 40px;
+    position: relative;
+    font-size: 16px;
+}
+.mdl-porcentaje{
+  overflow: visible;
+    display: inline-block;
+    vertical-align: text-bottom;
+    line-height: 1em;
+    font-size: 44px;
+    font-weight: 300;
+    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.mdl-cantidad_descuento{
+  float: left;
+    color: #39b54a;
+}
+
+</style>
+  <?php
+            include_once("../controller/ProductoController.php");
+            $ProductoController=new ProductoController();
+            if (isset($_GET['operacion']) and $_GET['operacion']=="listar") {
+                $resultado = $ProductoController->listarRubro($_GET['rubro']);
+            }else{
+              $resultado = $ProductoController->listar();
+            }
+            while ($muestra = mysqli_fetch_array($resultado)) {
+              if ($muestra['visible']==1 )
+              {
+                //si el producto esta visible, consultar si el comerciante puede publicar el producto
+                include_once("../controller/EmpresaController.php");
+                $EmpresaController=new EmpresaController();
+                $resultadoEmpresa=$EmpresaController->consultarEstadoDePublicador($muestra['usuario']);
+                while ($muestraEmpresa = mysqli_fetch_array($resultadoEmpresa)) {
+                  if ($muestraEmpresa['visible']==1 ) {
+                    ?>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                        <div class="mdl-card__media">
+                        <img src="../img/<?php echo $muestra['imagen'];?>">
+                           
+                        </div>
+                        <div class="mdl-card__title">
+                            <h4 class="mdl-card__title-text"> <?php echo $muestra['nombre'];?></h4>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                        
+                        <span class="mdl-precio">$<?php echo $muestra['precio'];?></span>
+                        <span class="mdl-porcentaje"><?php
+                                $porcentaje=floatval($muestra['precio'])*(floatval($muestra['cantidad_descuento'])/100);
+                                $precio=floatval($muestra['precio'])-$porcentaje;
+                                ?>$<?php echo number_format($precio,2,",","."); ?></span>
+                        <span class="mdl-cantidad_descuento"><?php echo $muestra['cantidad_descuento'];?>% OFF</span>
+</div>
+                        <div class="mdl-card__actions">
+                            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="descuentos.php?id_producto=<?php echo $muestra['id_producto'];?>">
+                           <?php
+                            $resultadoEmpresa=$EmpresaController->listarLaEmpresaDeEstaSesion($muestra['usuario']);
+                              while ($muestraEmpresa = mysqli_fetch_array($resultadoEmpresa)) {
+                                  echo $muestraEmpresa['nombre_fantasia'];
+
+                              }?>
+                            <i class="material-icons">chevron_right</i><?php echo $muestra['nombre'];?></a>
+                        </div>
+                      </div>
+                    <?php
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+?>
